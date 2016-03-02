@@ -1,0 +1,19 @@
+{
+  "host" : "127.0.0.1",
+  "port" : 80,
+  
+  "mysql" : {
+    "host" : "",
+    "user" : "",
+    "port" : 3306,
+    "password" : "",
+    "database" : "",
+    "charset" : "utf8mb4",
+    "dateStrings" : true,
+    "multipleStatements" : true
+  },
+  
+  "base_voucher_act_status_notStart" : 2,
+  "base_voucher_act_status_going" : 3,
+  "admin_project_url" : "http://dyc1.oeofo.com/E-Business_fish/"
+}
