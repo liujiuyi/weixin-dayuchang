@@ -10,7 +10,11 @@
   </div>
   <div class="media-body">
       <marquee direction="left" scrollamount="3">
-          <p class="text-primary">我是公告公告公告公告公告公告公告公告！！！！ </p>
+          <p class="text-primary">
+          {{#each newslist}}
+             {{newsTitle}}
+          {{/each}}
+          </p>
       </marquee>
   </div>
 </div>
@@ -23,29 +27,26 @@
  <div class="carousel-inner">
   {{#each carouselPicList1}}
     <div class="item {{each_index_active @index}}"> 
-     <img width="100%" src="{{pic goodsPicUrl}}" /> 
+      <a href="goods_detail?goodsId={{goodsId}}&goodsFlag={{goodsFlag}}" ><img src="{{pic goodsPicUrl}}" class="img-responsive center-block" /></a> 
     </div>
   {{/each}}
  </div> 
 </div> 
 <ul class="list-inline bd">
-  <a href=""><li><img src="images/bd-01.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-02.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-03.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-04.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?discountActivityId=6&pageID=goodsSearchList"><li><img src="images/bd-01.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?categoryId=9&pageID=goodsSearchList"><li><img src="images/bd-02.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?categoryId=11&pageID=goodsSearchList"><li><img src="images/bd-03.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?categoryId=10&pageID=goodsSearchList"><li><img src="images/bd-04.png" class="img-responsive center-block"/></li></a>
 
-  <a href=""><li><img src="images/bd-05.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-06.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-07.png" class="img-responsive center-block"/></li></a>
-  <a href=""><li><img src="images/bd-08.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?discountActivityId=5&pageID=goodsSearchList"><li><img src="images/bd-05.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?discountActivityId=7&pageID=goodsSearchList"><li><img src="images/bd-06.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?discountActivityId=3&pageID=goodsSearchList"><li><img src="images/bd-07.png" class="img-responsive center-block"/></li></a>
+  <a href="goods_list?discountActivityId=4&pageID=goodsSearchList"><li><img src="images/bd-08.png" class="img-responsive center-block"/></li></a>
 </ul>
 <ul class="list-group">
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
-    <li class="list-group-item"><img src="images/main_img.jpg" class="img-responsive center-block"/> </li>
+  {{#each carouselPicList2}}
+    <li class="list-group-item">
+      <a href="goods_detail?goodsId={{goodsId}}&goodsFlag={{goodsFlag}}" ><img src="{{pic goodsPicUrl}}" class="img-responsive center-block"/></a> 
+    </li>
+  {{/each}}
 </ul>

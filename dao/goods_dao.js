@@ -1,6 +1,6 @@
 "use strict";
 var config = require('../config.json');
-var logger = require('log4js').getLogger('dao/account_dao.js');
+var logger = require('log4js').getLogger('dao/goods_dao.js');
 
 var mysql = require('mysql');
 
