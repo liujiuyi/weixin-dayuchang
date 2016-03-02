@@ -6,10 +6,9 @@ var app = express();
 var path = require('path');
 var logger = require('log4js').getLogger('app.js');
 var bodyParser = require('body-parser');
-var config = require('./config.json');
 
 var hbs = require("hbs");
-
+var config = require('./config.json');
 var blocks = {};
 hbs.registerHelper('extend', function(name, context) {
   var block = blocks[name];
@@ -25,6 +24,15 @@ hbs.registerHelper('block', function(name) {
   // clear the block
   blocks[name] = [];
   return val;
+});
+hbs.registerHelper('pic', function(val) {
+  return config.admin_project_url + val;
+});
+hbs.registerHelper('each_index_active', function(val) {
+  if(val == 0)
+    return "active";
+  else 
+    return "";
 });
 
 app.set('views', path.join(__dirname, 'views'));
@@ -61,7 +69,4 @@ app.use(function (err, req, res, next) {
   });
 });
 
-
-var server = app.listen(config.port, function() {
-  logger.debug('Listening on port %d', server.address().port);
-});
+module.exports = app;
