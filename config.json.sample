@@ -15,5 +15,6 @@
   
   "base_voucher_act_status_notStart" : 2,
   "base_voucher_act_status_going" : 3,
+  "base_so_type_service" : 2,
   "admin_project_url" : "http://dyc1.oeofo.com/E-Business_fish/"
 }

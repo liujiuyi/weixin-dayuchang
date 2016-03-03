@@ -51,6 +51,10 @@ app.use(function(req, res, next) {
 var routes = require('./routes/index');
 app.use('/', routes);
 
+var goods_routes = require('./routes/goods');
+app.use('/goods', goods_routes);
+
+
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
