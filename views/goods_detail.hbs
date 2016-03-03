@@ -1,1 +1,22 @@
-goods_detail
+<div id="goodsCarousel" class="carousel slide" data-ride="carousel"> 
+ <ol class="carousel-indicators">
+  {{#each goodsPictureurList}}
+    <li data-target="#goodsCarousel" data-slide-to="{{@index}}" class="{{each_index_active @index}}"></li> 
+  {{/each}}
+ </ol> 
+ <div class="carousel-inner">
+  {{#each goodsPictureurList}}
+    <div class="item {{each_index_active @index}}"> 
+      <img src="{{pic ZPictureUrl}}" class="img-responsive center-block" />
+    </div>
+  {{/each}}
+ </div> 
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{goodsDetail.goodsName}}</h2>
+  </div>
+  <div class="panel-body">
+    {{goodsDetail.goodsIntroduction}}
+  </div>
+</div>

@@ -55,12 +55,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/goods_detail', function (req, res, next) {
-  res.render('goods_detail');
-});
-
-router.get('/goods_list', function (req, res, next) {
-  res.render('goods_list');
-});
-
 module.exports = router;
